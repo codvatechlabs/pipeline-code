@@ -34,6 +34,11 @@ pipeline {
                echo 'I am in monitoring phase'
             }
         }
+        stage('Security') {
+            steps {
+               echo 'I am in security phase'
+            }
+        }
         stage('Slack Message') {
             steps {
                 slackSend channel: '#devops-alerts',
